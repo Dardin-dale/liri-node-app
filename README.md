@@ -7,8 +7,8 @@ Liri takes in the following Commands:
   *movie-this
   *do-what-it-says
   
- ## concert-this <artist>
+ ## concert-this (artist)
  concert-this accepts an artist name and  will search the Bands in Town API and print the all of the upcoming events for the artist.
   example:
-  ![GitHub Logo](/Pictures/concert-this.png)
+  ![GitHub Logo](/Pictures/concert-this.PNG)
 Format: ![Alt Text](url)
