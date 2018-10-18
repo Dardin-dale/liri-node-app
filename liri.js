@@ -127,5 +127,34 @@ function movieThis(movie) {
 
 //Uses fs to read random.txt and executes its contents
 function doWhat () {
+    fs.readFile('random.txt', 'utf8', function(err, data) {
+        if (err) {
+            console.log('Error: ' + err);
+        }
+        var input = data.split(',');
+        switch (input[0]) {
+            case 'concert-this':
+            concertThis(input[1]);
+        break;
 
+        case 'spotify-this-song':
+            if(input.length > 0) {
+              spotifyThis(input[1]);  
+            } else {
+              spotifyThis('The Sign Ace of Base');
+            }
+            break;
+            
+        case 'movie-this':
+            if (input.length > 0) {
+              movieThis(input[1]);  
+            } else {
+              movieThis('mr+nobody');
+            }
+            break;
+        default:
+            break;
+        }
+        
+    })
 }
